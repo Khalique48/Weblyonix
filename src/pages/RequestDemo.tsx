@@ -24,7 +24,7 @@ export default function RequestDemo() {
         setLoading(true);
         setError('');
         try {
-            const res = await fetch('/demo-request', {
+            const res = await fetch('/api/demo-request', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),

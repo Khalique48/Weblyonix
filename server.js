@@ -59,8 +59,8 @@ async function sendEmail({ subject, html }) {
   });
 }
 
-// ── POST /contact ──────────────────────────────────────────
-app.post('/contact', async (req, res) => {
+// ── POST /api/contact ──────────────────────────────────────
+app.post('/api/contact', async (req, res) => {
   const { name, email, message } = req.body;
 
   if (!name || !email || !message) {
@@ -118,8 +118,8 @@ app.post('/contact', async (req, res) => {
   }
 });
 
-// ── POST /demo-request ─────────────────────────────────────
-app.post('/demo-request', async (req, res) => {
+// ── POST /api/demo-request ─────────────────────────────────
+app.post('/api/demo-request', async (req, res) => {
   const { name, email, company, phone, projectType, message } = req.body;
 
   if (!name || !email) {
